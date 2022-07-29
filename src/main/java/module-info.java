@@ -14,4 +14,8 @@ module br.com.betterhungry.betterhungry {
     exports br.com.betterhungry.controllers;
     exports br.com.betterhungry;
     opens br.com.betterhungry to javafx.fxml;
+    exports br.com.betterhungry.controllers.controllersCliente;
+    opens br.com.betterhungry.controllers.controllersCliente to javafx.fxml;
+    exports br.com.betterhungry.controllers.controllersRestaurante;
+    opens br.com.betterhungry.controllers.controllersRestaurante to javafx.fxml;
 }

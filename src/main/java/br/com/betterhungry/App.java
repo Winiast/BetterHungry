@@ -17,8 +17,8 @@ public class App extends Application {
     private static Scene loginRestauranteScene;
     private static Scene loginClienteScene;
     URL fxmlTelaInicial = getClass().getResource("telaInicial.fxml");
-    URL fxmlLoginRestaurante = getClass().getResource("loginRestaurante.fxml");
-    URL fxmlLoginCliente = getClass().getResource("loginCliente.fxml");
+    URL fxmlLoginRestaurante = getClass().getResource("restaurante/loginRestaurante.fxml");
+    URL fxmlLoginCliente = getClass().getResource("cliente/loginCliente.fxml");
 
     @Override
     public void start(Stage primaryStage) throws IOException {

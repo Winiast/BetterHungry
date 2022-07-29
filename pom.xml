@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.betterhungry</groupId>
-    <artifactId>better-hungry</artifactId>
+    <artifactId>BetterHungry</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>better-hungry</name>
 
@@ -113,7 +113,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                br.com.betterhungry.betterhungry/br.com.betterhungry.App
+                                br.com.betterhungry.App
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
