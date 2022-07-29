@@ -1,4 +1,4 @@
-package br.com.betterhungry.controllers;
+package br.com.betterhungry.controllers.controllersCliente;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class LoginRestauranteController {
+public class LoginClienteController {
 
     @FXML
     private Button botaoCadastrar;
@@ -26,7 +26,7 @@ public class LoginRestauranteController {
     }
 
     @FXML
-    void telaCadastroRestaurante(ActionEvent event) {
+    void telaCadastroCliente(ActionEvent event) {
 
     }
 
