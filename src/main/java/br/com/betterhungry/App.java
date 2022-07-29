@@ -1,6 +1,7 @@
 package br.com.betterhungry;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,9 +16,11 @@ public class App extends Application {
 
     private static Scene telaInicialScene;
     private static Scene loginRestauranteScene;
+    private static Scene cadastroRestauranteScene;
     private static Scene loginClienteScene;
     URL fxmlTelaInicial = getClass().getResource("telaInicial.fxml");
     URL fxmlLoginRestaurante = getClass().getResource("restaurante/loginRestaurante.fxml");
+    URL fxmlCadastrorestaurante = getClass().getResource("restaurante/cadastroRestaurante.fxml");
     URL fxmlLoginCliente = getClass().getResource("cliente/loginCliente.fxml");
 
     @Override
@@ -29,6 +32,9 @@ public class App extends Application {
 
         Parent loginRestaurante = new FXMLLoader().load(fxmlLoginRestaurante);
         loginRestauranteScene = new Scene(loginRestaurante);
+
+        Parent cadastroRestaurante = new FXMLLoader().load(fxmlCadastrorestaurante);
+        cadastroRestauranteScene = new Scene(cadastroRestaurante);
 
         Parent loginCliente = new FXMLLoader().load(fxmlLoginCliente);
         loginClienteScene = new Scene(loginCliente);
@@ -52,6 +58,10 @@ public class App extends Application {
 
             case 2:
                 stage.setScene(loginClienteScene);
+                break;
+
+            case 3:
+                stage.setScene(cadastroRestauranteScene);
                 break;
         }
     }

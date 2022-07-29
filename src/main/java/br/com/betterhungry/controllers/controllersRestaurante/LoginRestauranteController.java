@@ -1,5 +1,6 @@
 package br.com.betterhungry.controllers.controllersRestaurante;
 
+import br.com.betterhungry.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -27,7 +28,7 @@ public class LoginRestauranteController {
 
     @FXML
     void telaCadastroRestaurante(ActionEvent event) {
-
+        App.trocarTela(3);
     }
 
 }
