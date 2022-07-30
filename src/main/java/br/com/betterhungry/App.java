@@ -18,10 +18,12 @@ public class App extends Application {
     private static Scene loginRestauranteScene;
     private static Scene cadastroRestauranteScene;
     private static Scene loginClienteScene;
+    private static Scene cadastroClienteScene;
     URL fxmlTelaInicial = getClass().getResource("telaInicial.fxml");
     URL fxmlLoginRestaurante = getClass().getResource("restaurante/loginRestaurante.fxml");
-    URL fxmlCadastrorestaurante = getClass().getResource("restaurante/cadastroRestaurante.fxml");
+    URL fxmlCadastroRestaurante = getClass().getResource("restaurante/cadastroRestaurante.fxml");
     URL fxmlLoginCliente = getClass().getResource("cliente/loginCliente.fxml");
+    URL fxmlCadastroCliente = getClass().getResource("cliente/cadastroCliente.fxml");
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -33,11 +35,14 @@ public class App extends Application {
         Parent loginRestaurante = new FXMLLoader().load(fxmlLoginRestaurante);
         loginRestauranteScene = new Scene(loginRestaurante);
 
-        Parent cadastroRestaurante = new FXMLLoader().load(fxmlCadastrorestaurante);
+        Parent cadastroRestaurante = new FXMLLoader().load(fxmlCadastroRestaurante);
         cadastroRestauranteScene = new Scene(cadastroRestaurante);
 
         Parent loginCliente = new FXMLLoader().load(fxmlLoginCliente);
         loginClienteScene = new Scene(loginCliente);
+
+        Parent cadastrarCliente = new FXMLLoader().load(fxmlCadastroCliente);
+        cadastroClienteScene = new Scene(cadastrarCliente);
 
         primaryStage.setTitle("Better Hungry");
         primaryStage.setScene(telaInicialScene);
@@ -62,6 +67,10 @@ public class App extends Application {
 
             case 3:
                 stage.setScene(cadastroRestauranteScene);
+                break;
+
+            case 4:
+                stage.setScene(cadastroClienteScene);
                 break;
         }
     }
