@@ -1,5 +1,6 @@
 package br.com.betterhungry.controllers.controllersRestaurante;
 
+import br.com.betterhungry.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +9,8 @@ import javafx.scene.control.TextField;
 
 public class CadastroRestauranteController {
 
+    @FXML
+    private Button botaoVoltar;
     @FXML
     private Button botaoCriarConta;
 
@@ -30,8 +33,13 @@ public class CadastroRestauranteController {
     private PasswordField campoSenha;
 
     @FXML
-    void criarConta(ActionEvent event) {
+    public void criarConta(ActionEvent event) {
+        App.trocarTela(1);
+    }
 
+    @FXML
+    public void voltarTela(ActionEvent event) {
+        App.trocarTela(1);
     }
 
 }
