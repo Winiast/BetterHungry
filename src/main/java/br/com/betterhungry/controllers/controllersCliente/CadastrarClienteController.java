@@ -37,15 +37,13 @@ public class CadastrarClienteController {
     private TextField textoUsuario;
 
     @FXML
-    void mudarTelaCadastrado(ActionEvent event) {
+    void mudarTelaCadastro(ActionEvent event) {
         App.trocarTela(2);
-        System.out.println("Teste muda cadastro");
     }
-
     @FXML
     void mudarTelaVoltar(ActionEvent event) {
         App.trocarTela(2);
-    }
 
+    }
 }
 
