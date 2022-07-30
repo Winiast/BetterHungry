@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="524.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.betterhungry.controllers.controllersCliente.CadastrarClienteController">
+<AnchorPane prefHeight="524.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.betterhungry.controllers.controllersCliente.CadastrarClienteController">
    <children>
       <Label layoutX="245.0" layoutY="45.0" text="Cadastro Cliente">
          <font>
