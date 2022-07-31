@@ -10,9 +10,9 @@ public class Cliente {
     private String senha;
     private String cpf;
     private String endereco;
-    private Date dataDeNascimento;
+    private String dataDeNascimento;
 
-    public Cliente(String nome, String usuario, String senha, String cpf, String endereco, Date dataDeNascimento) {
+    public Cliente(String nome, String usuario, String senha, String cpf, String endereco, String dataDeNascimento) {
         this.nome = nome;
         this.usuario = usuario;
         this.senha = senha;
@@ -69,11 +69,11 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public Date getDataDeNascimento() {
+    public String getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(Date dataDeNascimento) {
+    public void setDataDeNascimento(String dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
