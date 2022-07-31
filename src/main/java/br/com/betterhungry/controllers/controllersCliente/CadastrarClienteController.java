@@ -31,7 +31,7 @@ public class CadastrarClienteController {
     private PasswordField textoConfirmacaoDaSenha;
 
     @FXML
-    private DatePicker textoDataDeNascimento;
+    private TextField textoDataDeNascimento;
 
     @FXML
     private TextField textoEndereco;
@@ -53,7 +53,7 @@ public class CadastrarClienteController {
         String senha = textoSenha.getText();
         String cpf = textoCPF.getText();
         String endereco = textoEndereco.getText();
-        Date dataDeNascimento = (Date) textoDataDeNascimento.getUserData();
+        String dataDeNascimento = textoDataDeNascimento.getText();
 
         Cliente cliente = new Cliente(nome, usuario, senha, cpf, endereco, dataDeNascimento);
 

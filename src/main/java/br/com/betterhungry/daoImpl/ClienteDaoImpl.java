@@ -24,7 +24,7 @@ public class ClienteDaoImpl extends Dao implements ClienteDao {
         statement.setString(3, cliente.getSenha());
         statement.setString(4, cliente.getCpf());
         statement.setString(5, cliente.getEndereco());
-        statement.setString(6, String.valueOf(cliente.getDataDeNascimento()));
+        statement.setString(6, cliente.getDataDeNascimento());
         statement.execute();
 
         ResultSet resultSet = statement.getGeneratedKeys();
