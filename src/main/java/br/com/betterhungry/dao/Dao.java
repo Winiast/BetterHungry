@@ -8,7 +8,7 @@ public class Dao {
 
     public Connection getConnection() throws SQLException{
 
-        Connection conexao = DriverManager.getConnection("jdbc:postgres://localhost5432/betterhungry", "postgres", "26122003");
+        Connection conexao = DriverManager.getConnection("jdbc:postgresql://localhost:5432/BetterHungry", "postgres", "26122003");
 
         return conexao;
     }

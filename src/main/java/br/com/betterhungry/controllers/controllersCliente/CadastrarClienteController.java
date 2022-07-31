@@ -1,11 +1,20 @@
 package br.com.betterhungry.controllers.controllersCliente;
 
 import br.com.betterhungry.App;
+import br.com.betterhungry.dao.ClienteDao;
+import br.com.betterhungry.dao.Dao;
+import br.com.betterhungry.daoImpl.ClienteDaoImpl;
+import br.com.betterhungry.modelos.Cliente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Date;
 
 public class CadastrarClienteController {
 
@@ -22,7 +31,7 @@ public class CadastrarClienteController {
     private PasswordField textoConfirmacaoDaSenha;
 
     @FXML
-    private TextField textoDataDeNascimento;
+    private DatePicker textoDataDeNascimento;
 
     @FXML
     private TextField textoEndereco;
@@ -38,6 +47,24 @@ public class CadastrarClienteController {
 
     @FXML
     void mudarTelaCadastro(ActionEvent event) {
+
+        String nome = textoNome.getText();
+        String usuario = textoUsuario.getText();
+        String senha = textoSenha.getText();
+        String cpf = textoCPF.getText();
+        String endereco = textoEndereco.getText();
+        Date dataDeNascimento = (Date) textoDataDeNascimento.getUserData();
+
+        Cliente cliente = new Cliente(nome, usuario, senha, cpf, endereco, dataDeNascimento);
+
+        try {
+            Connection conexao = new Dao().getConnection();
+            ClienteDao clienteDao = new ClienteDaoImpl(conexao);
+            clienteDao.salvar(cliente);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         App.trocarTela(2);
     }
     @FXML

@@ -4,22 +4,29 @@ import java.util.Date;
 
 public class Cliente {
 
+    private Integer id;
     private String nome;
     private String usuario;
     private String senha;
-    private String confirmacaoDaSenha;
     private String cpf;
     private String endereco;
     private Date dataDeNascimento;
 
-    public Cliente(String nome, String usuario, String senha, String confirmacaoDaSenha, String cpf, String endereco, Date dataDeNascimento) {
+    public Cliente(String nome, String usuario, String senha, String cpf, String endereco, Date dataDeNascimento) {
         this.nome = nome;
         this.usuario = usuario;
         this.senha = senha;
-        this.confirmacaoDaSenha = confirmacaoDaSenha;
         this.cpf = cpf;
         this.endereco = endereco;
         this.dataDeNascimento = dataDeNascimento;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -44,14 +51,6 @@ public class Cliente {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getConfirmacaoDaSenha() {
-        return confirmacaoDaSenha;
-    }
-
-    public void setConfirmacaoDaSenha(String confirmacaoDaSenha) {
-        this.confirmacaoDaSenha = confirmacaoDaSenha;
     }
 
     public String getCpf() {
